@@ -117,6 +117,7 @@ builder.Services.AddScoped<IPermiso_Repositorio, Permiso_Repositorio>();
 
 builder.Services.AddScoped<Mongo_Crear_Usuario>();
 builder.Services.AddScoped<Mongo_Registrar_Actividad>();
+builder.Services.AddScoped<Mongo_Actualizar_Perfil>();
 
 builder.Services.AddSingleton<IMongoRepository<Usuario_Mongo>>(sp =>
     new MongoRepository<Usuario_Mongo>(sp.GetRequiredService<IMongoClient>(), "usuarios_db", "usuarios"));
@@ -143,6 +144,18 @@ builder.Services.AddSingleton<IHostedService>(sp =>
         new RabbitMQEventConsumerConnection(rabbitHost, rabbitUser, rabbitPass),
         sp.GetRequiredService<IServiceProvider>()));
 
+
+builder.Services.AddSingleton<IHostedService>(sp =>
+    new Consumer_Event_Registrar_Actividad(
+        new RabbitMQEventConsumerConnection(rabbitHost, rabbitUser, rabbitPass),
+        sp.GetRequiredService<IServiceProvider>())
+);
+
+builder.Services.AddSingleton<IHostedService>(sp =>
+    new Consumer_Event_Actualizar_Perfil(
+        new RabbitMQEventConsumerConnection(rabbitHost, rabbitUser, rabbitPass),
+        sp.GetRequiredService<IServiceProvider>())
+);
 
 // Comunicaciones otros Microservicios
 
