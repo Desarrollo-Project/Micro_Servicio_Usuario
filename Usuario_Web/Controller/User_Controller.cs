@@ -43,4 +43,26 @@ public class User_Controller : ControllerBase
     }
 
     #endregion
+
+    #region Endpoints autenticados
+
+    /// <summary>
+    /// Actualiza el perfil del usuario.
+    /// </summary>
+    [Authorize]
+    [HttpPut("actualizar-perfil")]
+    public async Task<IActionResult> ActualizarPerfil([FromBody] Dto_Actualizar_Perfil dto)
+    {
+        var command = new Command_Actualizar_Perfil(
+            dto.UsuarioId,
+            dto.Nombre,
+            dto.Apellido,
+            dto.Correo,
+            dto.Telefono,
+            dto.Direccion);
+        var result = await _mediator.Send(command);
+        return result ? Ok("Perfil actualizado") : BadRequest("Error al actualizar el perfil");
+    }
+
+    #endregion
 }
