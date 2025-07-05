@@ -68,6 +68,18 @@ public class User_Controller : ControllerBase
     #region Endpoints autenticados
 
     /// <summary>
+    /// Cambia la contraseña del usuario autenticado.
+    /// </summary>
+    [Authorize]
+    [HttpPatch("cambiar-password")]
+    public async Task<IActionResult> CambiarPassword([FromBody] Dto_Cambiar_Password dto)
+    {
+        var command = new Command_Cambiar_Password(dto.UsuarioId, dto.PasswordActual, dto.NuevoPassword);
+        var result = await _mediator.Send(command);
+        return result ? Ok("Contraseña cambiada") : BadRequest("Error al cambiar la contraseña");
+    }
+
+    /// <summary>
     /// Actualiza el perfil del usuario.
     /// </summary>
     [Authorize]
