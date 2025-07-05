@@ -154,4 +154,46 @@ public class User_Controller : ControllerBase
 
 
     #endregion
+
+    #region Endpoints administrativos
+
+    /// <summary>
+    /// Obtiene todas las actividades del sistema.
+    /// </summary>
+    [Authorize]
+    [Permiso_Requerido("gestionar usuarios")]
+    [HttpGet("actividades")]
+    public async Task<IActionResult> ObtenerTodasLasActividades()
+    {
+        var actividades = await _mediator.Send(new Query_Get_All_Actividades());
+        return Ok(actividades);
+    }
+
+    /// <summary>
+    /// Obtiene la lista completa de usuarios.
+    /// </summary>
+    [Authorize]
+    [Permiso_Requerido("gestionar usuarios")]
+    [HttpGet("usuarios_all")]
+    public async Task<IActionResult> ObtenerTodosLosUsuarios()
+    {
+        var usuarios = await _mediator.Send(new Query_Get_All_Usuarios());
+        return Ok(usuarios);
+    }
+
+    /// <summary>
+    /// Asigna un rol específico a un usuario.
+    /// </summary>
+    [Authorize]
+    [Permiso_Requerido("gestionar roles y permisos")]
+    [HttpPatch("roles/{usuarioId}")]
+    public async Task<IActionResult> AsignarRol(Guid usuarioId, [FromBody] Dto_Asignar_Rol dto)
+    {
+        var command = new Command_Asignar_Rol(usuarioId, dto.Rolid);
+        await _mediator.Send(command);
+        return Ok("Rol asignado");
+    }
+
+    #endregion
+
 }
