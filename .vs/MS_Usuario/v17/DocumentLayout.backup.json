@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|solutionrelative:usuario_web\\controller\\user_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B3571138-A04E-4E06-AD67-5EB70BDD354E}|Usuario_Application\\Usuario_Application.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_application\\commands\\command_eliminar_permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3571138-A04E-4E06-AD67-5EB70BDD354E}|Usuario_Application\\Usuario_Application.csproj|solutionrelative:usuario_application\\commands\\command_eliminar_permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|solutionrelative:usuario_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Command_Eliminar_Permiso.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Application\\Commands\\Command_Eliminar_Permiso.cs",
+              "RelativeDocumentMoniker": "Usuario_Application\\Commands\\Command_Eliminar_Permiso.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Application\\Commands\\Command_Eliminar_Permiso.cs",
+              "RelativeToolTip": "Usuario_Application\\Commands\\Command_Eliminar_Permiso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T00:47:37.958Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,23 +49,22 @@
               "RelativeDocumentMoniker": "Usuario_Web\\Controller\\User_Controller.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Web\\Controller\\User_Controller.cs",
               "RelativeToolTip": "Usuario_Web\\Controller\\User_Controller.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAgwJkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALMAAAAAAAAAAAAQwMgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-05T00:05:45.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Web\\Program.cs",
               "RelativeDocumentMoniker": "Usuario_Web\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Web\\Program.cs",
               "RelativeToolTip": "Usuario_Web\\Program.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAQwKkAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAQwKkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T00:05:25.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-05T00:05:25.651Z"
             }
           ]
         },
