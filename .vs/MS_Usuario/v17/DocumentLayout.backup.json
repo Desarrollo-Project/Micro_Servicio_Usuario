@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|solutionrelative:usuario_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3571138-A04E-4E06-AD67-5EB70BDD354E}|Usuario_Application\\Usuario_Application.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_application\\handlers\\handler_restablecer_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3571138-A04E-4E06-AD67-5EB70BDD354E}|Usuario_Application\\Usuario_Application.csproj|solutionrelative:usuario_application\\handlers\\handler_restablecer_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3571138-A04E-4E06-AD67-5EB70BDD354E}|Usuario_Application\\Usuario_Application.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_application\\handlers\\handler_generar_token_recuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3571138-A04E-4E06-AD67-5EB70BDD354E}|Usuario_Application\\Usuario_Application.csproj|solutionrelative:usuario_application\\handlers\\handler_generar_token_recuperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_web\\controller\\user_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|solutionrelative:usuario_web\\controller\\user_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0202D0D1-024B-44D4-9DB8-682CDBA76D98}|Usuario_Web\\Usuario_Web.csproj|solutionrelative:usuario_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3571138-A04E-4E06-AD67-5EB70BDD354E}|Usuario_Application\\Usuario_Application.csproj|c:\\users\\admin\\desktop\\micro_servicio_usuario\\usuario_application\\handlers\\handler_crear_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +38,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Handler_Restablecer_Password.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Application\\Handlers\\Handler_Restablecer_Password.cs",
+              "RelativeDocumentMoniker": "Usuario_Application\\Handlers\\Handler_Restablecer_Password.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Application\\Handlers\\Handler_Restablecer_Password.cs",
+              "RelativeToolTip": "Usuario_Application\\Handlers\\Handler_Restablecer_Password.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T23:58:21.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Handler_Generar_Token_Recuperacion.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Application\\Handlers\\Handler_Generar_Token_Recuperacion.cs",
+              "RelativeDocumentMoniker": "Usuario_Application\\Handlers\\Handler_Generar_Token_Recuperacion.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Application\\Handlers\\Handler_Generar_Token_Recuperacion.cs",
+              "RelativeToolTip": "Usuario_Application\\Handlers\\Handler_Generar_Token_Recuperacion.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T23:58:11.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Handler_Crear_Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Application\\Handlers\\Handler_Crear_Usuario.cs",
               "RelativeDocumentMoniker": "Usuario_Application\\Handlers\\Handler_Crear_Usuario.cs",
@@ -42,26 +76,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Web\\Program.cs",
               "RelativeDocumentMoniker": "Usuario_Web\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Web\\Program.cs",
               "RelativeToolTip": "Usuario_Web\\Program.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAQwKcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAQwKcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T23:26:41.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "User_Controller.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Web\\Controller\\User_Controller.cs",
               "RelativeDocumentMoniker": "Usuario_Web\\Controller\\User_Controller.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Micro_Servicio_Usuario\\Usuario_Web\\Controller\\User_Controller.cs",
               "RelativeToolTip": "Usuario_Web\\Controller\\User_Controller.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowEMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T23:25:09.743Z",
               "EditorCaption": ""
