@@ -230,6 +230,18 @@ public class User_Controller : ControllerBase
         return exito ? Ok("Permiso eliminado") : BadRequest("Permiso no encontrado o error al eliminar");
     }
 
+
+    /// <summary>
+    /// Devuelve todos los roles con sus respectivos permisos.
+    /// </summary>
+    [Authorize]
+    [Permiso_Requerido("gestionar roles y permisos")]
+    [HttpGet("roles/permisos")]
+    public async Task<IActionResult> ObtenerRolesConPermisos()
+    {
+        var result = await _mediator.Send(new Query_Obtener_Roles_y_Permisos());
+        return Ok(result);
+    }
     #endregion
 
 }
