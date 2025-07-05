@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Usuario_Application.Commands;
 using Usuario_Application.DTOs;
+using Usuario_Application.Queries;
 using Usuario_Domain.Exceptions;
 
 namespace Usuario_Web.Controller;
@@ -63,7 +64,40 @@ public class User_Controller : ControllerBase
         return result ? Ok("Contraseña actualizada") : BadRequest("Token inválido o expirado");
     }
 
+    /// <summary>
+    /// Confirma la cuenta de usuario con un código recibido por correo.
+    /// </summary>
+    [HttpPatch("confirmar")]
+    public async Task<IActionResult> ConfirmarCuenta([FromBody] Dto_Confirmar_Usuario dto)
+    {
+        var command = new Command_Confirmar_Usuario(dto.Email, dto.Codigo);
+        var result = await _mediator.Send(command);
+        return result ? Ok(new { message = "Cuenta confirmada" }) : BadRequest(new { message = "Código inválido o expirado" });
+
+    }
+
+    /// <summary>
+    /// Obtiene un usuario por correo electrónico.
+    /// </summary>
+    [HttpGet("email/{email}")]
+    public async Task<IActionResult> Get_Usuario_Correo([FromRoute] string email)
+    {
+        var usuario = await _mediator.Send(new Query_Get_Usuario_Correo(email));
+        return usuario != null ? Ok(usuario) : NotFound();
+    }
+
+    /// <summary>
+    /// Obtiene un usuario por ID.
+    /// </summary>
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetUsuario(Guid id)
+    {
+        var usuario = await _mediator.Send(new Query_Get_Usuario_Id(id));
+        return usuario != null ? Ok(usuario) : NotFound();
+    }
+
     #endregion
+
 
     #region Endpoints autenticados
 
@@ -96,6 +130,28 @@ public class User_Controller : ControllerBase
         var result = await _mediator.Send(command);
         return result ? Ok("Perfil actualizado") : BadRequest("Error al actualizar el perfil");
     }
+
+    // <summary>
+    /// Obtiene el historial de actividades de un usuario con filtros opcionales.
+    /// </summary>
+    [Authorize]
+    [HttpGet("{usuarioId}/historial")]
+    public async Task<IActionResult> ObtenerHistorial(
+        Guid usuarioId,
+        [FromQuery] string? tipoAccion,
+        [FromQuery] DateTime? desde,
+        [FromQuery] DateTime? hasta)
+    {
+        var actividades = await _mediator.Send(new Query_Get_Historial(
+            usuarioId,
+            tipoAccion,
+            desde,
+            hasta
+        ));
+
+        return Ok(actividades);
+    }
+
 
     #endregion
 }
