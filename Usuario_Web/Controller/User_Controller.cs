@@ -42,6 +42,27 @@ public class User_Controller : ControllerBase
         return CreatedAtAction(nameof(CrearUsuario), new { id = usuarioId });
     }
 
+    /// <summary>
+    /// Solicita un token de recuperación de contraseña.
+    /// </summary>
+    [HttpPost("solicitar-recuperacion")]
+    public async Task<IActionResult> SolicitarRecuperacion([FromBody] Dto_Solicitar_Recuperacion dto)
+    {
+        var result = await _mediator.Send(new Command_Generar_Token_Recuperacion(dto.Correo));
+        return result ? Ok() : BadRequest("Correo no registrado");
+    }
+
+    /// <summary>
+    /// Restablece la contraseña usando un token.
+    /// </summary>
+    [HttpPatch("restablecer-password")]
+    public async Task<IActionResult> RestablecerPassword([FromBody] Dto_Restablecer_Password dto)
+    {
+        var command = new Command_Restablecer_Password(dto.Token, dto.NuevaPassword);
+        var result = await _mediator.Send(command);
+        return result ? Ok("Contraseña actualizada") : BadRequest("Token inválido o expirado");
+    }
+
     #endregion
 
     #region Endpoints autenticados
