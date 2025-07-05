@@ -163,6 +163,12 @@ builder.Services.AddSingleton<IHostedService>(sp =>
         sp.GetRequiredService<IServiceProvider>())
 );
 
+builder.Services.AddSingleton<IHostedService>(sp =>
+    new Consumer_Event_Usuario_Confirmado(
+        new RabbitMQEventConsumerConnection(rabbitHost, rabbitUser, rabbitPass),
+        sp.GetRequiredService<IServiceProvider>())
+);
+
 // Comunicaciones otros Microservicios
 
 builder.Services.AddHttpClient<INotificaciones_Cliente, Notificaciones_Cliente>((serviceProvider, client) =>
