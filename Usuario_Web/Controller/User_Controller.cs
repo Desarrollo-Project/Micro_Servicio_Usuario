@@ -194,6 +194,42 @@ public class User_Controller : ControllerBase
         return Ok("Rol asignado");
     }
 
+    /// <summary>
+    /// Reemplaza los permisos asignados a un rol.
+    /// </summary>
+    [Authorize]
+    [Permiso_Requerido("gestionar roles y permisos")]
+    [HttpPut("roles/permisos")]
+    public async Task<IActionResult> ModificarPermisosDeRol([FromBody] Dto_Modificar_Permisos_Rol dto)
+    {
+        await _mediator.Send(new Command_Modificar_Permisos_Rol(dto));
+        return Ok("Permisos del rol modificados correctamente");
+    }
+
+    /// <summary>
+    /// Agrega un permiso a un rol específico.
+    /// </summary>
+    [Authorize]
+    [Permiso_Requerido("gestionar roles y permisos")]
+    [HttpPost("roles/permisos")]
+    public async Task<IActionResult> AgregarPermiso([FromBody] Dto_Actualizar_Permiso dto)
+    {
+        var exito = await _mediator.Send(new Command_Agregar_Permiso(dto));
+        return exito ? Ok("Permiso agregado") : BadRequest("Permiso no encontrado o error al asignar");
+    }
+
+    /// <summary>
+    /// Elimina un permiso de un rol.
+    /// </summary>
+    [Authorize]
+    [Permiso_Requerido("gestionar roles y permisos")]
+    [HttpDelete("roles/permisos")]
+    public async Task<IActionResult> EliminarPermiso([FromBody] Dto_Actualizar_Permiso dto)
+    {
+        var exito = await _mediator.Send(new Command_Eliminar_Permiso(dto));
+        return exito ? Ok("Permiso eliminado") : BadRequest("Permiso no encontrado o error al eliminar");
+    }
+
     #endregion
 
 }
